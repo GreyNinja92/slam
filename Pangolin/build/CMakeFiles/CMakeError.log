@@ -1,0 +1,41 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Performing C++ SOURCE FILE Test HAVE_FFMPEG_MAX_ANALYZE_DURATION failed with the following output:
+Change Dir: /Users/sakshamramkhatod/Desktop/Stuff/slam/Pangolin/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_feddf/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_feddf.dir/build.make CMakeFiles/cmTC_feddf.dir/build
+Building CXX object CMakeFiles/cmTC_feddf.dir/src.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/usr/local/include -Wall -Wextra  -Wno-deprecated-register -DHAVE_FFMPEG_MAX_ANALYZE_DURATION -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -o CMakeFiles/cmTC_feddf.dir/src.cxx.o -c /Users/sakshamramkhatod/Desktop/Stuff/slam/Pangolin/build/CMakeFiles/CMakeTmp/src.cxx
+/Users/sakshamramkhatod/Desktop/Stuff/slam/Pangolin/build/CMakeFiles/CMakeTmp/src.cxx:3:33: error: invalid use of non-static data member 'max_analyze_duration'
+        sizeof(AVFormatContext::max_analyze_duration);
+               ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_feddf.dir/src.cxx.o] Error 1
+make: *** [cmTC_feddf/fast] Error 2
+
+
+Source file was:
+#include "/usr/local/include/libavformat/avformat.h"
+      int main() {
+        sizeof(AVFormatContext::max_analyze_duration);
+      }
